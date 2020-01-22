@@ -18,6 +18,8 @@ export default class componentName extends Component {
         rewind: true,
         autoplay: true
     };
+    console.log(this.props,'uuuuuu');
+    
     return (
       <>
         <Head>
@@ -26,17 +28,17 @@ export default class componentName extends Component {
         <div>
             hello
             <img src={nature} />
-            {/* <OwlCarousel ref="car" options={options}  >
+            <OwlCarousel ref="car" options={options}  >
                 <div><img src={nature} alt="The Last of us"/></div>
                 <div><img src={nature} alt="GTA V"/></div>
                 <div><img src={nature} alt="Mirror Edge"/></div>
-            </OwlCarousel> */}
+            </OwlCarousel>
             <Loader
                 type="Bars"
                 color="#00BFFF"
                 height={100}
                 width={100}
-                timeout={3000} //3 secs
+                // timeout={3000} //3 secs
             />
         </div>
       </>
