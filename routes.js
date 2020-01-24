@@ -1,7 +1,8 @@
-const routes = require('next-routes')
+const nextRoutes = require('next-routes')
 
-module.exports = routes() 
-.add("demo", "/demo/:id/:path*")
-.add('hello') 
-.add("post/crater", "/post/crater/:id/:path*")
+const routes = (module.exports = nextRoutes())
+routes.add("demo", "/demo/:id/:path*")
+routes.add('hello','/hello/:name/:path*') 
+routes.add("post/crater", "/post/crater/:id/:path*")
+routes.add("details", "/details/:id/:path*")
 

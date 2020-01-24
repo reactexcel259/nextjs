@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import OwlCarousel from 'react-owl-carousel2';
 import nature from '../download.jpeg';
-import Head from 'next/head';
+// import Head from 'next/head';
 import Loader from 'react-loader-spinner'
+import {withRouter} from 'next/router'
 // import a from '../node_modules/react-owl-carousel2/lib/styles.css'
 // require('react-owl-carousel2/lib/style.css'); //Allows for server-side rendering.
-import 'react-owl-carousel2/lib/styles.css';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+// import 'react-owl-carousel2/lib/styles.css';
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 
 
-export default class componentName extends Component {
+ class componentName extends Component {
   render() {
     const options = {
         items: 1,
@@ -22,9 +23,9 @@ export default class componentName extends Component {
     
     return (
       <>
-        <Head>
+        {/* <Head>
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        </Head>
+        </Head> */}
         <div>
             hello
             <img src={nature} />
@@ -45,3 +46,4 @@ export default class componentName extends Component {
     )
   }
 }
+export default withRouter(componentName)

@@ -1,24 +1,17 @@
-import React, { Component, useEffect } from 'react';
-import Hello from './hello';
-// import { useRouter } from 'next/router';
+import React, {Component} from "react";
+import {connect} from "react-redux";
 
-
-export default class Index extends Component {
-   static getInitialProps({query}){
-        return {query}
-    }
-
-componentDidMount(){
-    // this.props.push('/demo')
-
-}
-    render(){
-    console.log(this.props,'routerrouter');
-    return (
-      <>
-        <Hello id="crater"/> with index
-      </>
-    )
+class Page extends Component {
+    render() {
+      console.log(this.props,'lll');
+      
+        return (
+            <div>
+                <div>Prop from Redux {this.props.foo}</div>
+                <div>Prop from getInitialProps {this.props.custom}</div>
+            </div>
+        )
     }
 }
 
+export default Page;

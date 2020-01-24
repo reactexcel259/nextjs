@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import {withRouter} from 'next/router'
 
-export default class Details extends Component {
+
+class Details extends Component {
   render() {
     return (
       <>
@@ -10,3 +12,4 @@ export default class Details extends Component {
     )
   }
 }
+export default withRouter(Details)
